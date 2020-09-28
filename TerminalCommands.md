@@ -48,6 +48,7 @@ Useful to install and version control softwares.
 |   `nano [file]`	|Opens the Terminal editor
 |   `open [file]`	|Opens a file
 |   `[command] -h`	|Get help about a command
+
 ## Change Directory (cd)
 |Commands| Results|
 | --- | --------- |
@@ -79,13 +80,6 @@ Useful to install and version control softwares.
 | `mkdir "<dir>"`| Create a folder with a space in the filename
 | `rmdir <dir>`	| Delete a folder (only works on empty folders)
 | `rm -R <dir>`	| Delete a folder and its contents, equivalent to `rm -r`
-| `touch <file>`	| Create a new file without any extension
-| `cp <file> <dir>`	| Copy a file to the folder
-| `cp <file> <newfile>`	| Copy a file to the current folder
-| `cp <file>~/<dir>/<newfile>`	| Copy a file to the folder and rename the copied file
-| `cp -R <dir> <"new dir">`	| Copy a folder to a new folder with spaces in the filename
-| `cp -i <file><dir>`	| Prompts you before copying a file with a warning overwrite message
-| `cp <file1> <file2> <file3>/Users/<dir>`	| Copy multiple files to a folder
 | `rm <file>`	| Delete a file (This deletes the file permanently; use with caution.)
 | `rm -i <file>`	| Delete a file only when you give confirmation
 | `rm -f <file>`	| Force removal without confirmation
@@ -94,9 +88,16 @@ Useful to install and version control softwares.
 | `mv <file> <dir>`	| Move a file to the folder, possibly by overwriting an existing file
 | `mv -i <file> <dir>`	| Optional -i flag to warn you before overwriting the file
 | `mv *.png ~/<dir>`	| Move all PNG files from current folder to a different folder
+| `touch <file>`	| Create a new file without any extension
+| `cp <file> <dir>`	| Copy a file to the folder
+| `cp <file> <newfile>`	| Copy a file to the current folder
+| `cp <file>~/<dir>/<newfile>`	| Copy a file to the folder and rename the copied file
+| `cp -R <dir> <"new dir">`	| Copy a folder to a new folder with spaces in the filename
+| `cp -i <file><dir>`	| Prompts you before copying a file with a warning overwrite message
+| `cp <file1> <file2> <file3>/Users/<dir>`	| Copy multiple files to a folder
 
 
-# Remote Connection Environment
+## Remote Connection Environment
 
 |Commands| Results|
 | --- | --------- |
@@ -107,3 +108,9 @@ Useful to install and version control softwares.
 | `qstat -u username`| Jobs submitted by user
 |  `qsub` | Execute the jobfile
 |   `qdel` | Terminate one job
+
+## Editing using terminal editor
+|Commands| Results|
+| --- | --------- |
+|   `nano <file>` | Open the terminal editor to write file
+|  control + x | Exit the terminal editor 
