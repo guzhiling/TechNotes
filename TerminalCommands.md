@@ -66,6 +66,9 @@ Useful to install and version control softwares.
 |   `ls`|	Display the name of files and subdirectories in the directory
 |  `ls -C`	|Force multi-column output of the listing
 |   `ls -a`	|List all entries including those with .(period) and ..(double period)
+|   `ls -l <dir/file>`	|List the sizes of the files in the dir / files, use * to list all the file sizes in the current dir
+|   `du -sh .`	|Calculate the whole size of the current dir
+
 
 ## File and Directory Management
 |Commands| Results|
@@ -75,7 +78,7 @@ Useful to install and version control softwares.
 | `mkdir <dir1> <dir2> <dir3>`| 	Create several folders at once
 | `mkdir "<dir>"`| Create a folder with a space in the filename
 | `rmdir <dir>`	| Delete a folder (only works on empty folders)
-| `rm -R <dir>`	| Delete a folder and its contents
+| `rm -R <dir>`	| Delete a folder and its contents, equivalent to `rm -r`
 | `touch <file>`	| Create a new file without any extension
 | `cp <file> <dir>`	| Copy a file to the folder
 | `cp <file> <newfile>`	| Copy a file to the current folder
