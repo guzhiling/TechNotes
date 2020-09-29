@@ -15,16 +15,13 @@ Author: Ling
 
 
 ## Remote Connection Environment
+[Official Instructions](https://www.hpc.iastate.edu/guides/condo-2017/access-and-login)
 
 |Commands| Results|
 | --- | --------- |
-| `ssh username@server.address`|Connect to remote server
-| `export LC_ALL="en_US.UTF-8" `|Set language
+| `ssh username@condo2017.its.iastate.edu`|Connect to remote server
 | `module load r/3.5.0-py2-x335hrh`| Load a specific environment
-| `qstat -a`| All jobs
-| `qstat -u username`| Jobs submitted by user
-|  `qsub` | Execute the jobfile
-|   `qdel` | Terminate one job
+
 
 ## Editing using terminal editor
 |Commands| Results|
@@ -38,31 +35,41 @@ Author: Ling
 2. Enter R environment:  `$ R`
 3. Exit: `q()`
 
-## Homebrew & Cask
-Useful to install and version control softwares.
-|Commands| Results|
-| --- | --------- |
-|` xcode-select —install`|Install Xcode Tools
-|`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`|  Install Homebrew
+## Create job files using SLURM workload manager
+- Introduction: https://www.hpc.iastate.edu/guides/condo-2017/managing-jobs-using-slurm-workload-manager
+- Job file generator: https://www.hpc.iastate.edu/guides/condo-2017/slurm-job-script-generator-for-condo
+- Steps:
+  1. Create a sbatch job file `jobname.sh` using either texteditor locally or vim, change the postfix to `sh` manually
+  2. In the terminal, under the directory where `programName.R` locates in, type `sbatch jobname.sh`
+  3. Check if your job has been submitted by `qstat -u NetID` or `qstat -a`
 
-|Commands| Results|
-| --- | --------- |
-|`brew install cask`| Install Cask
-| `brew search --casks`| List apps
-|  `brew search (discord)  `|  Search apps
-| `brew cask install (discord)`|Install
-|` brew cask upgrade`|Update all softwares downloaed through cask
-|` brew cask help`|Help
+- The job file look like this:
+```
+    #!/bin/bash
 
-## Short Cuts
-|Commands| Results|
-| --- | --------- |
-|    Ctrl + A	| Go to the beginning of the line you're currently typing on
-|    Ctrl + E	| Go to the end of the line you're currently typing on
-|    Ctrl + U	| Clear the line before the cursor
-|    Ctrl + K	| Clear the line after the cursor
-|    Ctrl + C	| Kill whatever you're running
-|    Ctrl + D	| Exit the current shell
+    # Copy/paste this job script into a text file and submit with the command:
+    #    sbatch thefilename
+    # job standard output will go to the file slurm-%j.out (where %j is the job ID)
+
+    #SBATCH --time=1:00:00   # walltime limit (HH:MM:SS)
+    #SBATCH --nodes=1   # number of nodes
+    #SBATCH --ntasks-per-node=16   # 16 processor core(s) per node 
+
+    # LOAD MODULES, INSERT CODE, AND RUN YOUR PROGRAMS HERE
+    module load r
+    R CMD BATCH programName.R
+```
+
+- Commands for checking job status
+  |Commands| Results|
+  | `qstat -a`| All jobs
+  | `qstat -u username`| Jobs submitted by user
+  |  `qsub` | Execute the jobfile
+  |   `qdel` | Terminate one job
+  | `export LC_ALL="en_US.UTF-8" `|Set language
+
+  
+
 ## Basic Commands
 |Commands| Results|
 | --- | --------- |
@@ -121,4 +128,32 @@ Useful to install and version control softwares.
 | `cp -R <dir> <"new dir">`	| Copy a folder to a new folder with spaces in the filename
 | `cp -i <file><dir>`	| Prompts you before copying a file with a warning overwrite message
 | `cp <file1> <file2> <file3>/Users/<dir>`	| Copy multiple files to a folder
+
+## Short Cuts
+|Commands| Results|
+| --- | --------- |
+|    Ctrl + A	| Go to the beginning of the line you're currently typing on
+|    Ctrl + E	| Go to the end of the line you're currently typing on
+|    Ctrl + U	| Clear the line before the cursor
+|    Ctrl + K	| Clear the line after the cursor
+|    Ctrl + C	| Kill whatever you're running
+|    Ctrl + D	| Exit the current shell
+
+
+## Homebrew & Cask
+Useful to install and version control softwares.
+|Commands| Results|
+| --- | --------- |
+|` xcode-select —install`|Install Xcode Tools
+|`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`|  Install Homebrew
+
+|Commands| Results|
+| --- | --------- |
+|`brew install cask`| Install Cask
+| `brew search --casks`| List apps
+|  `brew search (discord)  `|  Search apps
+| `brew cask install (discord)`|Install
+|` brew cask upgrade`|Update all softwares downloaed through cask
+|` brew cask help`|Help
+
 
