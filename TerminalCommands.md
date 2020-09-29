@@ -12,6 +12,32 @@ Author: Ling
 - [Mac Homebrew](https://pastebin.com/jV9XzPrs)
 
 # Useful Tools
+
+
+## Remote Connection Environment
+
+|Commands| Results|
+| --- | --------- |
+| `ssh username@server.address`|Connect to remote server
+| `export LC_ALL="en_US.UTF-8" `|Set language
+| `module load r/3.5.0-py2-x335hrh`| Load a specific environment
+| `qstat -a`| All jobs
+| `qstat -u username`| Jobs submitted by user
+|  `qsub` | Execute the jobfile
+|   `qdel` | Terminate one job
+
+## Editing using terminal editor
+|Commands| Results|
+| --- | --------- |
+|   `nano <file>` | Open the terminal editor to write file
+|  control + x | Exit the terminal editor 
+
+## Testing using terminal R environment
+
+1. Load R module: `$ module load r`
+2. Enter R environment:  `$ R`
+3. Exit: `q()`
+
 ## Homebrew & Cask
 Useful to install and version control softwares.
 |Commands| Results|
@@ -96,21 +122,3 @@ Useful to install and version control softwares.
 | `cp -i <file><dir>`	| Prompts you before copying a file with a warning overwrite message
 | `cp <file1> <file2> <file3>/Users/<dir>`	| Copy multiple files to a folder
 
-
-## Remote Connection Environment
-
-|Commands| Results|
-| --- | --------- |
-| `ssh username@server.address`|Connect to remote server
-| `export LC_ALL="en_US.UTF-8" `|Set language
-| `module load r/3.5.0-py2-x335hrh`| Load a specific environment
-| `qstat -a`| All jobs
-| `qstat -u username`| Jobs submitted by user
-|  `qsub` | Execute the jobfile
-|   `qdel` | Terminate one job
-
-## Editing using terminal editor
-|Commands| Results|
-| --- | --------- |
-|   `nano <file>` | Open the terminal editor to write file
-|  control + x | Exit the terminal editor 
