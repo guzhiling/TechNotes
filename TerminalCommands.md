@@ -62,6 +62,7 @@ Author: Ling
 
 - Commands for checking job status
   |Commands| Results|
+  | --- | --------- |
   | `qstat -a`| All jobs
   | `qstat -u username`| Jobs submitted by user
   |  `qsub` | Execute the jobfile
