@@ -29,6 +29,15 @@ Author: Ling
 |   `nano <file>` | Open the terminal editor to write file
 |  control + x | Exit the terminal editor 
 
+## Python Environment
+- Q&A: https://www.hpc.iastate.edu/faq#python-package
+```
+  module avail pip
+  module load py-pip/***
+  pip install --user <packagename>
+```
+
+
 ## Testing using terminal R environment
 
 1. Load R module: `$ module load r`
