@@ -33,7 +33,7 @@ Author: Ling
 - Q&A: https://www.hpc.iastate.edu/faq#python-package
 ```
   module avail pip
-  module load py-pip/***
+  module load py-pip/9.0.1-py3-dpds55c
   pip install --user <packagename>
 ```
 
