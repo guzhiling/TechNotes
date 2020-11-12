@@ -29,6 +29,20 @@ Author: Ling
 |   `nano <file>` | Open the terminal editor to write file
 |  control + x | Exit the terminal editor 
 
+
+## Julia 
+- Find the version to download on https://julialang.org/downloads/
+- use 'tar xvzf your_tar_file' to unpack *.tar.gz
+- cd to the unpacked directory, and run './configure --prefix=/your_work_directory' (software will be installed in this directory)
+- issue 'make' to compile software
+- issue 'make install' to install compiled code in the directory specified in the --prefix option on the configure command
+
+- Invoke julia executable by using its full path: <Julia directory>/bin/julia (https://julialang.org/downloads/platform/) 
+```
+  wget https://julialang-s3.julialang.org/bin/linux/x64/1.0/julia-1.0.5-linux-x86_64.tar.gz 
+  tar –tzf documents.tar.gz # https://phoenixnap.com/kb/extract-tar-gz-files-linux-command-line
+   <Julia directory>/bin/julia
+```
 ## Python Environment
 - Q&A: https://www.hpc.iastate.edu/faq#python-package
 ```
