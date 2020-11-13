@@ -11,7 +11,6 @@ Author: Ling
 - [Cheat Sheet by Tahul Saigal](https://www.makeuseof.com/tag/mac-terminal-commands-cheat-sheet/)
 - [Mac Homebrew](https://pastebin.com/jV9XzPrs)
 
-# Useful Tools
 
 
 ## Remote Connection Environment
@@ -30,7 +29,16 @@ Author: Ling
 |  control + x | Exit the terminal editor 
 
 
-## Julia 
+## Pronto
+[How to use Pronto](https://researchit.las.iastate.edu/general-guide-how-use-pronto)
+
+[Use Julia GPU docker containers with singularity](https://researchit.las.iastate.edu/use-julia-gpu-docker-containers-singularity)
+
+```
+srun --nodes 1 --ntasks 1 --cpus-per-task 2 --gres gpu:1 --pty bash
+```
+
+### Julia 
 - Find the version to download on https://julialang.org/downloads/
 - use 'tar xvzf your_tar_file' to unpack *.tar.gz
 - cd to the unpacked directory, and run './configure --prefix=/your_work_directory' (software will be installed in this directory)
@@ -43,6 +51,10 @@ Author: Ling
   tar –tzf documents.tar.gz # https://phoenixnap.com/kb/extract-tar-gz-files-linux-command-line
    <Julia directory>/bin/julia
 ```
+
+## CONDO2017
+
+
 ## Python Environment
 - Q&A: https://www.hpc.iastate.edu/faq#python-package
 ```
@@ -52,13 +64,13 @@ Author: Ling
 ```
 
 
-## Testing using terminal R environment
+### Testing using terminal R environment
 
 1. Load R module: `$ module load r`
 2. Enter R environment:  `$ R`
 3. Exit: `q()`
 
-## Create job files using SLURM workload manager
+### Create job files using SLURM workload manager
 - Introduction: https://www.hpc.iastate.edu/guides/condo-2017/managing-jobs-using-slurm-workload-manager
 - Job file generator: https://www.hpc.iastate.edu/guides/condo-2017/slurm-job-script-generator-for-condo
 - Steps:
