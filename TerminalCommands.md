@@ -19,7 +19,7 @@ Author: Ling
 |Commands| Results|
 | --- | --------- |
 | `ssh username@condo2017.its.iastate.edu`|Connect to remote server
-| `ssh username@pronto.its.iastate.edu`|Connect to remote server
+| `ssh username@pronto.las.iastate.edu`|Connect to remote server
 | `module load r/3.5.0-py2-x335hrh`| Load a specific environment
 
 File transfer [File transfer](https://researchit.las.iastate.edu/data-transfer-node-condo)
