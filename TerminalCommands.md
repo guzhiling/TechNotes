@@ -22,7 +22,9 @@ Author: Ling
 | `ssh username@pronto.las.iastate.edu`|Connect to remote server
 | `module load r/3.5.0-py2-x335hrh`| Load a specific environment
 
-File transfer [File transfer](https://researchit.las.iastate.edu/data-transfer-node-condo)
+## File transfer 
+
+[File transfer](https://researchit.las.iastate.edu/data-transfer-node-condo)
  `scp -r username@hpc-class.its.iastate.edu:mydir ./mydir`
  - Pronto's hpc-class:`prontodtn.las.iastate.edu`
  - Condo's hpc-class:`condodtn.its.iastate.edu`
@@ -43,7 +45,7 @@ srun --nodes 1 --ntasks 1 --cpus-per-task 2 --gres gpu:1 --pty bash
 ```
 
 
-## CONDO2017
+## condo2017
 
 
 ### Python Environment
@@ -54,7 +56,7 @@ srun --nodes 1 --ntasks 1 --cpus-per-task 2 --gres gpu:1 --pty bash
   pip install --user <packagename>
 ```
 
-### Julia 
+### Julia environment
 - Find the version to download on https://julialang.org/downloads/
 - use 'tar xvzf your_tar_file' to unpack *.tar.gz
 - cd to the unpacked directory, and run './configure --prefix=/your_work_directory' (software will be installed in this directory)
@@ -68,8 +70,7 @@ srun --nodes 1 --ntasks 1 --cpus-per-task 2 --gres gpu:1 --pty bash
    <Julia directory>/bin/julia
 ```
 
-
-### Testing using terminal R environment
+### R environment
 
 1. Load R module: `$ module load r`
 2. Enter R environment:  `$ R`
