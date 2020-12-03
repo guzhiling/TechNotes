@@ -5,7 +5,7 @@ Author: Ling
 
 
 
-# Sources & References
+## Sources & References
 - [Official Ububtu Tutorials](https://ubuntu.com/tutorials/command-line-for-beginners)
 - [Linux Shell Commands](https://docs.cs.cf.ac.uk/notes/linux-shell-commands/)
 - [Cheat Sheet by Tahul Saigal](https://www.makeuseof.com/tag/mac-terminal-commands-cheat-sheet/)
@@ -19,8 +19,13 @@ Author: Ling
 |Commands| Results|
 | --- | --------- |
 | `ssh username@condo2017.its.iastate.edu`|Connect to remote server
+| `ssh username@pronto.its.iastate.edu`|Connect to remote server
 | `module load r/3.5.0-py2-x335hrh`| Load a specific environment
 
+File transfer [File transfer](https://researchit.las.iastate.edu/data-transfer-node-condo)
+ `scp -r username@hpc-class.its.iastate.edu:mydir ./mydir`
+ - Pronto's hpc-class:`prontodtn.las.iastate.edu`
+ - Condo's hpc-class:`condodtn.its.iastate.edu`
 
 ## Editing using terminal editor
 |Commands| Results|
@@ -31,11 +36,22 @@ Author: Ling
 
 ## Pronto
 [How to use Pronto](https://researchit.las.iastate.edu/general-guide-how-use-pronto)
-
 [Use Julia GPU docker containers with singularity](https://researchit.las.iastate.edu/use-julia-gpu-docker-containers-singularity)
 
 ```
 srun --nodes 1 --ntasks 1 --cpus-per-task 2 --gres gpu:1 --pty bash
+```
+
+
+## CONDO2017
+
+
+### Python Environment
+- Q&A: https://www.hpc.iastate.edu/faq#python-package
+```
+  module avail pip
+  module load py-pip/9.0.1-py3-dpds55c
+  pip install --user <packagename>
 ```
 
 ### Julia 
@@ -50,17 +66,6 @@ srun --nodes 1 --ntasks 1 --cpus-per-task 2 --gres gpu:1 --pty bash
   wget https://julialang-s3.julialang.org/bin/linux/x64/1.0/julia-1.0.5-linux-x86_64.tar.gz 
   tar –tzf documents.tar.gz # https://phoenixnap.com/kb/extract-tar-gz-files-linux-command-line
    <Julia directory>/bin/julia
-```
-
-## CONDO2017
-
-
-## Python Environment
-- Q&A: https://www.hpc.iastate.edu/faq#python-package
-```
-  module avail pip
-  module load py-pip/9.0.1-py3-dpds55c
-  pip install --user <packagename>
 ```
 
 
