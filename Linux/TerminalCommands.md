@@ -196,9 +196,6 @@ Useful to install and version control softwares.
 | --- | --------- |
 |` xcode-select —install`|Install Xcode Tools
 |`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`|  Install Homebrew
-
-|Commands| Results|
-| --- | --------- |
 |`brew install cask`| Install Cask
 | `brew search --casks`| List apps
 |  `brew search (discord)  `|  Search apps
