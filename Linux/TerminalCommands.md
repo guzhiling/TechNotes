@@ -105,18 +105,18 @@ srun --nodes 1 --ntasks 1 --cpus-per-task 2 --gres gpu:1 --pty bash
 - Commands for checking job status
 
   |Commands| Results|
-  | --- | --------- |
+  | ------ | --------- |
   | `qstat -a`| All jobs
   | `qstat -u username`| Jobs submitted by user
-  |  `qsub` | Execute the jobfile
-  |   `qdel` | Terminate one job
+  | `qsub` | Execute the jobfile
+  | `qdel` | Terminate one job
   | `export LC_ALL="en_US.UTF-8" `|Set language
 
   
 ## Basic Commands
 
 |Commands| Results|
-| --- | --------- |
+| ------ | --------- |
 |  ` / (Forward Slash)`|	Top level directory
 |  `. (Single Period)` |	Current directory
 |  `.. (Double Period)`|	Parent directory
@@ -131,7 +131,7 @@ srun --nodes 1 --ntasks 1 --cpus-per-task 2 --gres gpu:1 --pty bash
 ## Change Directory (cd)
 
 |Commands| Results|
-| --- | --------- |
+| ------ | --------- |
 |`cd` |	Home directory
 |`cd [folder]`|	Change directory, e.g. cd Documents
 |`cd ~	` | Home directory
@@ -145,18 +145,18 @@ srun --nodes 1 --ntasks 1 --cpus-per-task 2 --gres gpu:1 --pty bash
 ## List (ls)
 
 |Commands| Results|
-| --- | --------- |
-|   `ls`|	Display the name of files and subdirectories in the directory
+| ------ | --------- |
+|  `ls`|	Display the name of files and subdirectories in the directory
 |  `ls -C`	|Force multi-column output of the listing
-|   `ls -a`	|List all entries including those with .(period) and ..(double period)
-|   `ls -l <dir/file>`	|List the sizes of the files in the dir / files, use * to list all the file sizes in the current dir
-|   `du -sh .`	|Calculate the whole size of the current dir
+|  `ls -a`	|List all entries including those with .(period) and ..(double period)
+|  `ls -l <dir/file>`	|List the sizes of the files in the dir / files, use * to list all the file sizes in the current dir
+|  `du -sh .`	|Calculate the whole size of the current dir
 
 
 ## File and Directory Management
 
 |Commands| Results|
-| --- | --------- |
+| ------ | --------- |
 | `mkdir <dir>`	| Create new folder named <dir>
 | `mkdir -p <dir>/<dir>`	| Create nested folders
 | `mkdir <dir1> <dir2> <dir3>`| 	Create several folders at once
@@ -182,7 +182,7 @@ srun --nodes 1 --ntasks 1 --cpus-per-task 2 --gres gpu:1 --pty bash
 ## Short Cuts
 
 |Commands| Results|
-| --- | --------- |
+| ------ | --------- |
 |    Ctrl + A	| Go to the beginning of the line you're currently typing on
 |    Ctrl + E	| Go to the end of the line you're currently typing on
 |    Ctrl + U	| Clear the line before the cursor
@@ -195,7 +195,7 @@ srun --nodes 1 --ntasks 1 --cpus-per-task 2 --gres gpu:1 --pty bash
 Useful to install and version control softwares.
 
 |Commands| Results|
-| --- | --------- |
+| ------ | --------- |
 |` xcode-select —install`|Install Xcode Tools
 |`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`|  Install Homebrew
 |`brew install cask`| Install Cask
