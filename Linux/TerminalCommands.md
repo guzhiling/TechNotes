@@ -118,15 +118,14 @@ srun --nodes 1 --ntasks 1 --cpus-per-task 2 --gres gpu:1 --pty bash
 
 |Commands| Results|
 | --- | --------- |
-|  ` / (Forward Slash)`|	Top level directory
-|  `. (Single Period)` |	Current directory
-|  `.. (Double Period)`|	Parent directory
-|  `~ (Tilde)`	        | Home directory
-|  `sudo [command]`	   | Run command with the security privileges of the super user
-|  `nano [file]`	      | Opens the Terminal editor
-|  `open [file]`	      | Opens a file
-|  `[command] -h`	     | Get help about a command
-
+|  ` / (Forward Slash)`|	Top level directory|
+|  `. (Single Period)` |	Current directory|
+|  `.. (Double Period)`|	Parent directory|
+|  `~ (Tilde)`	        | Home directory|
+|  `sudo [command]`	   | Run command with the security privileges of the super user|
+|  `nano [file]`	      | Opens the Terminal editor|
+|  `open [file]`	      | Opens a file|
+|  `[command] -h`	     | Get help about a command|
 
 ## Change Directory (cd)
 
