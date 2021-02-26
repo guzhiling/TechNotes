@@ -30,6 +30,7 @@ Author: Ling
  - Condo's hpc-class:`condodtn.its.iastate.edu`
 
 ## Editing using terminal editor
+
 |Commands| Results|
 | --- | --------- |
 |   `nano <file>` | Open the terminal editor to write file
@@ -102,6 +103,7 @@ srun --nodes 1 --ntasks 1 --cpus-per-task 2 --gres gpu:1 --pty bash
 ```
 
 - Commands for checking job status
+
   |Commands| Results|
   | --- | --------- |
   | `qstat -a`| All jobs
@@ -113,6 +115,7 @@ srun --nodes 1 --ntasks 1 --cpus-per-task 2 --gres gpu:1 --pty bash
   
 
 ## Basic Commands
+
 |Commands| Results|
 | --- | --------- |
 |   ` / (Forward Slash)`|	Top level directory
@@ -125,6 +128,7 @@ srun --nodes 1 --ntasks 1 --cpus-per-task 2 --gres gpu:1 --pty bash
 |   `[command] -h`	|Get help about a command
 
 ## Change Directory (cd)
+
 |Commands| Results|
 | --- | --------- |
 | `cd` |	Home directory|
@@ -147,6 +151,7 @@ srun --nodes 1 --ntasks 1 --cpus-per-task 2 --gres gpu:1 --pty bash
 
 
 ## File and Directory Management
+
 |Commands| Results|
 | --- | --------- |
 | `mkdir <dir>`	| Create new folder named <dir>
@@ -172,6 +177,7 @@ srun --nodes 1 --ntasks 1 --cpus-per-task 2 --gres gpu:1 --pty bash
 | `cp <file1> <file2> <file3>/Users/<dir>`	| Copy multiple files to a folder
 
 ## Short Cuts
+
 |Commands| Results|
 | --- | --------- |
 |    Ctrl + A	| Go to the beginning of the line you're currently typing on
