@@ -4,6 +4,12 @@ My scribbling as a beginner of different languages and environments
 
 
 ## Table of Content
-- [Terminal Commands](TerminalCommands.md)
+- Linux
+	- [Basic Terminal Commands](Linux/TerminalCommands.md)
 
 
+
+- R
+
+
+- Python
