@@ -126,18 +126,21 @@ srun --nodes 1 --ntasks 1 --cpus-per-task 2 --gres gpu:1 --pty bash
 |  `open [file]`	      | Opens a file
 |  `[command] -h`	     | Get help about a command
 
+
+
 ## Change Directory (cd)
 
 |Commands| Results|
 | --- | --------- |
-|`cd` |	Home directory|
-|`cd [folder]`|	Change directory, e.g. cd Documents|
-|`cd ~	` | Home directory|
-|`cd /`|	Root of the drive|
-|`cd -`|	Previous directory or folder you last browsed|
-|`pwd` |Show your working directory|
-|`cd ..` |Move up to the parent directory|
-|`cd ../..`|	Move up two levels|
+|`cd` |	Home directory
+|`cd [folder]`|	Change directory, e.g. cd Documents
+|`cd ~	` | Home directory
+|`cd /`|	Root of the drive
+|`cd -`|	Previous directory or folder you last browsed
+|`pwd` |Show your working directory
+|`cd ..` |Move up to the parent directory
+|`cd ../..`|	Move up two levels
+
 
 ## List (ls)
 
