@@ -141,6 +141,7 @@ srun --nodes 1 --ntasks 1 --cpus-per-task 2 --gres gpu:1 --pty bash
 |`cd../..`|	Move up two levels|
 
 ## List (ls)
+
 |Commands| Results|
 | --- | --------- |
 |   `ls`|	Display the name of files and subdirectories in the directory
@@ -190,6 +191,7 @@ srun --nodes 1 --ntasks 1 --cpus-per-task 2 --gres gpu:1 --pty bash
 
 ## Homebrew & Cask
 Useful to install and version control softwares.
+
 |Commands| Results|
 | --- | --------- |
 |` xcode-select —install`|Install Xcode Tools
