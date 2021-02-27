@@ -5,6 +5,6 @@
 	- [For Loop](Linux/ForLoop.md)
 
 - R
-	- [R](R/dplyr.Rmd)
+	- [dplyr](R/dplyr.Rmd)
 
 - Python
