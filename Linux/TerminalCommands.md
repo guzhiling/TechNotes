@@ -117,7 +117,7 @@ srun --nodes 1 --ntasks 1 --cpus-per-task 2 --gres gpu:1 --pty bash
 
 |Commands| Results|
 | ------ | --------- |
-|  ` / (Forward Slash)`|	Top level directory
+|  `/ (Forward Slash)`|	Top level directory
 |  `. (Single Period)` |	Current directory
 |  `.. (Double Period)`|	Parent directory
 |  `~ (Tilde)`	        | Home directory
