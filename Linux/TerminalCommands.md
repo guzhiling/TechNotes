@@ -13,7 +13,9 @@ Author: Ling
 
 
 
-## Remote Connection Environment
+## Introduction
+
+### Remote Connection Environment
 [Official Instructions](https://www.hpc.iastate.edu/guides/condo-2017/access-and-login)
 
 |Commands| Results|
@@ -22,14 +24,14 @@ Author: Ling
 | `ssh username@pronto.las.iastate.edu`|Connect to remote server
 | `module load r/3.5.0-py2-x335hrh`| Load a specific environment
 
-## File transfer 
+### File transfer 
 
 [File transfer](https://researchit.las.iastate.edu/data-transfer-node-condo)
  `scp -r username@hpc-class.its.iastate.edu:mydir ./mydir`
  - Pronto's hpc-class:`prontodtn.las.iastate.edu`
  - Condo's hpc-class:`condodtn.its.iastate.edu`
 
-## Editing using terminal editor
+### Edit using terminal editor
 
 |Commands| Results|
 | --- | --------- |
@@ -37,45 +39,6 @@ Author: Ling
 |  control + x | Exit the terminal editor 
 
 
-## Pronto
-[How to use Pronto](https://researchit.las.iastate.edu/general-guide-how-use-pronto)
-[Use Julia GPU docker containers with singularity](https://researchit.las.iastate.edu/use-julia-gpu-docker-containers-singularity)
-
-```
-srun --nodes 1 --ntasks 1 --cpus-per-task 2 --gres gpu:1 --pty bash
-```
-
-
-## condo2017
-
-
-### Python Environment
-- Q&A: https://www.hpc.iastate.edu/faq#python-package
-```
-  module avail pip
-  module load py-pip/9.0.1-py3-dpds55c
-  pip install --user <packagename>
-```
-
-### Julia environment
-- Find the version to download on https://julialang.org/downloads/
-- use 'tar xvzf your_tar_file' to unpack *.tar.gz
-- cd to the unpacked directory, and run './configure --prefix=/your_work_directory' (software will be installed in this directory)
-- issue 'make' to compile software
-- issue 'make install' to install compiled code in the directory specified in the --prefix option on the configure command
-
-- Invoke julia executable by using its full path: <Julia directory>/bin/julia (https://julialang.org/downloads/platform/) 
-```
-  wget https://julialang-s3.julialang.org/bin/linux/x64/1.0/julia-1.0.5-linux-x86_64.tar.gz 
-  tar –tzf documents.tar.gz # https://phoenixnap.com/kb/extract-tar-gz-files-linux-command-line
-   <Julia directory>/bin/julia
-```
-
-### R environment
-
-1. Load R module: `$ module load r`
-2. Enter R environment:  `$ R`
-3. Exit: `q()`
 
 ### Create job files using SLURM workload manager
 - Introduction: https://www.hpc.iastate.edu/guides/condo-2017/managing-jobs-using-slurm-workload-manager
@@ -108,9 +71,52 @@ srun --nodes 1 --ntasks 1 --cpus-per-task 2 --gres gpu:1 --pty bash
   | ------ | --------- |
   | `qstat -a`| All jobs
   | `qstat -u username`| Jobs submitted by user
-  | `qsub` | Execute the jobfile
+  | `qsub` | Execute the jobfile (usually with postscript `.sh` or `.job`)
   | `qdel` | Terminate one job
+  | `qdel {1000..1002}` | Delet the job 1000 to job 1002
   | `export LC_ALL="en_US.UTF-8" `|Set language
+
+
+
+## Pronto (ISU LAS)
+[How to use Pronto](https://researchit.las.iastate.edu/general-guide-how-use-pronto)
+[Use Julia GPU docker containers with singularity](https://researchit.las.iastate.edu/use-julia-gpu-docker-containers-singularity)
+
+```
+srun --nodes 1 --ntasks 1 --cpus-per-task 2 --gres gpu:1 --pty bash
+```
+
+
+## condo2017 (ISU ITS)
+
+
+### Python Environment
+- Q&A: https://www.hpc.iastate.edu/faq#python-package
+```
+  module avail pip
+  module load py-pip/9.0.1-py3-dpds55c
+  pip install --user <packagename>
+```
+
+### Julia environment
+- Find the version to download on https://julialang.org/downloads/
+- use 'tar xvzf your_tar_file' to unpack *.tar.gz
+- cd to the unpacked directory, and run './configure --prefix=/your_work_directory' (software will be installed in this directory)
+- issue 'make' to compile software
+- issue 'make install' to install compiled code in the directory specified in the --prefix option on the configure command
+
+- Invoke julia executable by using its full path: <Julia directory>/bin/julia (https://julialang.org/downloads/platform/) 
+```
+  wget https://julialang-s3.julialang.org/bin/linux/x64/1.0/julia-1.0.5-linux-x86_64.tar.gz 
+  tar –tzf documents.tar.gz # https://phoenixnap.com/kb/extract-tar-gz-files-linux-command-line
+   <Julia directory>/bin/julia
+```
+
+### R environment
+
+1. Load R module: `$ module load r`
+2. Enter R environment:  `$ R`
+3. Exit: `q()`
 
   
 ## Basic Commands
